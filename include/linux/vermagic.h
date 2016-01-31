@@ -1,6 +1,7 @@
 #include <generated/utsrelease.h>
 
 /* Simply sanity version stamp for modules. */
+#define UTS_RELEASE "3.10.49-perf-g51d93d7-00235-ga2dd550"
 #ifdef CONFIG_SMP
 #define MODULE_VERMAGIC_SMP "SMP "
 #else
