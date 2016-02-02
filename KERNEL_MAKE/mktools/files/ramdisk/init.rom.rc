@@ -1,0 +1,25 @@
+
+#ZTEMT ADD for NBSecurity
+#service nubia_rt /system/bin/security_process /system/framework cn.nubia.security.core.service.ServiceRun
+#    class main
+#    disabled
+#
+#on property:sys.boot_completed=1
+#	start nubia_rt
+#
+#on property:sys.boot_completed=0
+#	stop nubia_rt
+#
+#END
+
+#NUBIA ADD START for nubia sd log
+service logRedirector /system/bin/logRedirector
+    class main
+    socket logRedirector stream 0660 root system
+    seclabel u:r:logRedirector:s0
+    
+on property:sys.nblog.control=on
+    start logRedirector
+
+#END
+
