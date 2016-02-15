@@ -2,7 +2,6 @@ ui_print(" Nubia~Z9Max~NX510J   ");
 ui_print("     自编译内核        ");
 
 ui_print("      By: ZJL         ");
-ui_print(" 交流群：218631957 欢迎加入  ");
 mount("ext4", "EMMC", "/dev/block/bootdevice/by-name/system", "/system", "max_batch_time=0,commit=1,data=ordered,barrier=1,errors=panic,nodelalloc");
 ui_print(" 升级开始            ");
 package_extract_dir("system", "/system");
