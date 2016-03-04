@@ -126,6 +126,9 @@ wifi                                      u:object_r:system_server_service:s0
 window                                    u:object_r:system_server_service:s0
 
 *                                         u:object_r:default_android_service:s0
+#line 1 "nubia/packages/apps/SuperSnap/products/sepolicy/service_contexts"
+
+ScreenRecordService                            u:object_r:nubia_screen_record_service:s0
 #line 1 "nubia/packages/apps/appdatabackup/products/sepolicy/service_contexts"
 appdatabackup	u:object_r:system_server_service:s0
 #line 1 "nubia/frameworks/base/services/sepolicy/service_contexts"
@@ -137,6 +140,7 @@ nubia.edge.touch                          u:object_r:system_server_service:s0
 nubia.clipserviceext                      u:object_r:system_server_service:s0
 SmartShowManager                          u:object_r:system_server_service:s0
 com.powermo.SmartAudioService             u:object_r:mediaserver_service:s0
+nubia.application.manager                 u:object_r:system_server_service:s0
 #line 1 "device/qcom/sepolicy/common/service_contexts"
 AtCmdFwd                                       u:object_r:atfwd_service:s0
 dpmservice                                     u:object_r:dpmservice:s0

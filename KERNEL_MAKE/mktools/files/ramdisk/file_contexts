@@ -261,27 +261,19 @@
 /data/app-asec(/.*)?        u:object_r:asec_image_file:s0
 # wirelesstest
 /dev/socket/wirelesstest       u:object_r:device:s0
+#line 1 "nubia/packages/apps/SuperSnap/products/sepolicy/file_contexts"
+
+/system/bin/nubia_screen_record        u:object_r:nubia_screen_record_exec:s0
+#line 1 "nubia/packages/apps/Woodpecker/products/sepolicy/qcom/file_contexts"
+
+# ZTEME SD log
+/dev/socket/woodpeckerd    u:object_r:woodpeckerd_socket:s0
+/system/bin/woodpeckerd    u:object_r:woodpeckerd_exec:s0
+
+
 #line 1 "nubia/packages/apps/appdatabackup/products/sepolicy/file_contexts"
 /dev/socket/appdatabackup	u:object_r:appdatabackup_socket:s0
 /system/bin/appdatabackup	u:object_r:appdatabackup_exec:s0
-
-#line 1 "nubia/packages/apps/ZCrashLogUpload/products/sepolicy/file_contexts"
-
-# ZTEME SD log
-/data/androidreboot(/.*)?   u:object_r:androidreboot_data_file:s0
-/system/bin/zcrashcatcher   u:object_r:zcrashcatcher_exec:s0
-
-
-#line 1 "nubia/packages/apps/ZLog/products/sepolicy/file_contexts"
-
-# ZTEME SD log
-/data/log(/.*)?		u:object_r:sdlog_data_file:s0
-/dev/socket/logRedirector    u:object_r:logRedirector_socket:s0
-/system/bin/logRedirector    u:object_r:logRedirector_exec:s0
-#add for oom dump log
-/data/oom_log(/.*)?		u:object_r:shell_data_file:s0
-#add end
-
 
 #line 1 "device/qcom/sepolicy/common/file_contexts"
 ###################################
