@@ -80,6 +80,8 @@ on boot
     write /proc/sys/vm/dirty_ratio 5
     write /proc/sys/vm/dirty_background_ratio 1
 	
+	# Tuxera exFAT kernel module
+    insmod /system/lib/modules/texfat.ko
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon

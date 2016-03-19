@@ -12,16 +12,14 @@
 #
 #END
 
-#Nubia add start, for woodpeckerd
-service woodpeckerd /system/bin/woodpeckerd
+#NUBIA ADD START for nubia sd log
+service logRedirector /system/bin/logRedirector
     class main
-    socket woodpeckerd stream 0666 root system
-    seclabel u:r:woodpeckerd:s0
-#Nubia add end
+    socket logRedirector stream 0660 root system
+    seclabel u:r:logRedirector:s0
+    
+on property:sys.nblog.control=on
+    start logRedirector
 
-# for ScreenRecord ------
-service screen_record /system/bin/nubia_screen_record
-    class main
-    user root
-    group sdcard_rw sdcard_r sdcard_all root shell
-# ZTEMT END -------------
+#END
+
